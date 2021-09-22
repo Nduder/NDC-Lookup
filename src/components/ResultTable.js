@@ -1,7 +1,7 @@
 import React from "react";
 
 const ResultTable = (props) => {
-  let allResults;
+  let allResults = [];
   if (!props.searchResults.results) allResults = <div>No result</div>;
   else {
     allResults = props.searchResults.results.map((ele) => {
