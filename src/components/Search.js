@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import ResultTable from "./ResultTable.js";
 import axios from "axios";
 
 const Search = () => {
   const [term, setTerm] = useState("");
-  const [ndcResults, setNdcResults] = useState("");
+  const [ndcResults, setNdcResults] = useState([]);
 
   useEffect(() => {
     search(term);
@@ -30,7 +31,7 @@ const Search = () => {
     <div>
       <label>NDC search</label>
       <input value={term} onChange={(e) => setTerm(e.target.value)}></input>
-      {ndcNumbers}
+      <ResultTable searchResults={ndcResults} />
     </div>
   );
 };
