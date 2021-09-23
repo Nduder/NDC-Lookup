@@ -10,7 +10,7 @@ const ResultTable = (props) => {
       return (
         <tr>
           <MedicationDisplay medInfo={ele} />
-          <NdcDisplay />
+          <NdcDisplay ndc={ele.product_ndc} />
         </tr>
       );
     });
