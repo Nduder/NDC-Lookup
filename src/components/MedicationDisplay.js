@@ -1,7 +1,6 @@
 import React from "react";
 
 const MedicationDisplay = ({ medInfo }) => {
-  console.log(medInfo);
   return (
     <React.Fragment>
       <td>{medInfo.brand_name}</td>
