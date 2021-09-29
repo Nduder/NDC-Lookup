@@ -3,7 +3,6 @@ import React from "react";
 const NdcUserModifiers = ({ modifiers, setModifiers }) => {
   const onModifierChange = (e, affix) => {
     setModifiers({ ...modifiers, [affix]: e.target.value });
-    console.log(modifiers.suffix);
   };
   return (
     <div>
