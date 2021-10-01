@@ -33,7 +33,7 @@ const Search = () => {
         modifiers={ndcModifiers}
         setModifiers={setNdcModifiers}
       />
-      <ResultTable searchResults={ndcResults} />
+      <ResultTable searchResults={ndcResults} ndcModifiers={ndcModifiers} />
     </div>
   );
 };

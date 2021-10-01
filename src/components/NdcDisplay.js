@@ -1,7 +1,15 @@
 import React from "react";
 
 const NdcDisplay = (props) => {
-  return <div>Hello</div>;
+  const { prefix, dash, suffix } = props.ndcModifiers;
+  const ndcChanged = props.ndc.replace("-", dash);
+  return (
+    <div>
+      {prefix}
+      {ndcChanged}
+      {suffix}
+    </div>
+  );
 };
 
 export default NdcDisplay;
