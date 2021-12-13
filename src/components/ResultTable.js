@@ -4,41 +4,35 @@ import NdcDisplay from "./NdcDisplay";
 
 const ResultTable = (props) => {
   let allResults = [];
-  if (!props.searchResults.results) allResults = <div>No result</div>;
+  if (!props.searchResults.results)
+    return (allResults = <div className="No-results">No results</div>);
   else {
     allResults = props.searchResults.results.map((ele) => {
       return (
-        <tr>
+        <tr className="results-table">
+          <NdcDisplay
+            ndc={ele.product_ndc}
+            ndcModifiers={props.resultsModifiers}
+          />
           <MedicationDisplay medInfo={ele} />
-          <NdcDisplay ndc={ele.product_ndc} ndcModifiers={props.ndcModifiers} />
         </tr>
       );
     });
   }
+
   return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Proprietary Name</th>
-            <th>Generic Name</th>
-            <th>Dosage Form</th>
-            <th>Route Name</th>
-            <th>Company Name</th>
-            <th>Ndc</th>
-          </tr>
+    <div className="tables-container">
+      <table className="all-table">
+        <thead className="table-head">
+          <th>NDC</th>
+          <th>Proprietary Name</th>
+          <th>Generic Name</th>
+          <th>Dose Form</th>
+          <th>Route Name</th>
+          <th>Company Name</th>
+          <th>Original</th>
         </thead>
-        <tbody>
-          {allResults}
-          <tr>
-            <td>BrandNameosterone</td>
-            <td>Genericosterone</td>
-            <td>Pill</td>
-            <td>IV</td>
-            <td>SuperMegaPharmCorp</td>
-            <td>12345-1234</td>
-          </tr>
-        </tbody>
+        <tbody>{allResults}</tbody>
       </table>
     </div>
   );
