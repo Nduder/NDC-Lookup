@@ -16,15 +16,27 @@ const Search = () => {
 
   useEffect(() => {
     //runs when term changes
-    const search = (query) => {
+    const search = async () => {
       // ndc api request
-      fetch(`https://api.fda.gov/drug/ndc.json?search="${query}"&limit=100`)
+      fetch(`https://api.fda.gov/drug/ndc.json?search="${term}"&limit=100`)
         .then((data) => {
           return data.json();
         })
         .then((data) => setNdcResults(data));
     };
-    search(term);
+
+    if (term && !ndcResults) {
+      search();
+    } else {
+      const setTimeOutCleanupId = setTimeout(() => {
+        if (term) {
+          search();
+        }
+      }, 500);
+      return () => {
+        clearTimeout(setTimeOutCleanupId);
+      };
+    }
   }, [term]);
 
   const copyNdcResults = () => {
