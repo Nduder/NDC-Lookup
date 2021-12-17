@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ResultTable from "./ResultTable.js";
 import NdcUserModifiers from "./NdcUserModifiers.js";
+import ScaleButton from "./Scale.js";
 
 const Search = () => {
   const [term, setTerm] = useState("");
@@ -56,6 +57,7 @@ const Search = () => {
     <div className="search-container">
       <div className="search-label">
         <div>NDC Tool</div>
+
         <input
           placeholder={searchPlaceholder}
           className="search-input"
