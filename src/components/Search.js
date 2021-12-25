@@ -16,9 +16,7 @@ const Search = () => {
     "Search - NDC #, Name, Active Ingredient, RxCUI, Uses, Form, Route, App Number or Company";
 
   useEffect(() => {
-    //runs when term changes
     const search = async () => {
-      // ndc api request
       fetch(`https://api.fda.gov/drug/ndc.json?search="${term}"&limit=100`)
         .then((data) => {
           return data.json();
@@ -33,7 +31,7 @@ const Search = () => {
         if (term) {
           search();
         }
-      }, 500);
+      }, 250);
       return () => {
         clearTimeout(setTimeOutCleanupId);
       };
