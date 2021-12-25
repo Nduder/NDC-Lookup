@@ -6,7 +6,7 @@ Easy search and modification of the National Drug Codes for medicine and drugs u
 
 ## Description
 
-This tool is meant to make life a bit easier when grabbing medical NDC codes and modifying them whether that be for research or personal use, using the OpenFDA API. Essentially allows you to search the entire OpenFDA API for drugs and change the NDCs all at once to your liking. For example if you want all NDCs for tenofovir, search 'tenofovir', press the copy button, and you'll have all the NDCs copied to your clipboard to paste into your R (or any other language) code. No more needing to download the FDA excel files and manually search and grab each code. Furthermore you can alter the NDC to you liking, for example change all 'Tenofovir Disoproxil Fumarate' NDCs to add a 'TDF' at the start so you know what your always working with.
+This tool is meant to make life a bit easier when grabbing medical NDC codes and modifying them whether that be for research or personal use, using the OpenFDA API. Essentially allows you to search for drugs and change the NDCs all at once to your liking. For example if you want all NDCs for tenofovir, search 'tenofovir', press the copy button, and you'll have all the NDCs copied to your clipboard to paste into your R (or any other language) code. No more needing to download the FDA excel files and manually search and grab each code. Furthermore you can alter the NDC to you liking, for example change all 'Tenofovir Disoproxil Fumarate' NDCs to add a 'TDF' at the start so you know what your always working with.
 
 ### Running NDC tool
 [Just use it here](https://www.ndctool.com/)
