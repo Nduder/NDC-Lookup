@@ -24,10 +24,10 @@ Should be very straightforward. Use the search bar to find whatever medicine/dru
 A:   If you have a feature in mind feel free to request it. Keep in mind though if you want to perform more complicated actions on the NDCs it might make more sense to use the full FDA NDC database file on their site [here](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory) and write your own code for it.
 
 ** Q:   What about the 3rd segment for NDCs? **
-A: 	  If it gets requested a lot then the 3rd segment will be added but as it stands haven't heard of anyone needing the 3rd segment (packaging) for research.
+A: 	  If it gets requested a lot then yes but haven't heard of anyone needing the 3rd segment (packaging) for their code.
 
 ** Q:   Will you release the other tools (user-form generator, ICD builder, etc) you made for your lab? **
-A: If I have time maybe. I would have to rewrite and refactor much of the code because they are written for specific backends and databases and could pose security risks if the open source version was too close to the original's. NDC tool was easy to port because it wasn't tied to any backend or databases that I would have to worry about.
+A: Maybe, if I have time. Would have to refactor it for an open source version because don't want it too close to the original's due to security risks with backend/database. NDC tool was easy to port because it wasn't tied to any backend or databases.
 
 ## To Add
 - Allow user to specify the delimiter (default is a comma)
